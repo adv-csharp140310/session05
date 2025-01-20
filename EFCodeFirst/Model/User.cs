@@ -15,6 +15,8 @@ public class User
     public string LastName { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    public string UserName { get; set; }
+    public string User_name { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime UpdatedAt { get; set; } = DateTime.Now;
     public bool IsActive { get; set; }
 }

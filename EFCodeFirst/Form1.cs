@@ -25,7 +25,7 @@ public partial class Form1 : Form
             LastName = "Madani",
             Email = "nadrim",
             Password = "123",
-            UserName = "Madani",
+            User_name = "Madani",
             IsActive = true
         });
         db.SaveChanges();
@@ -56,7 +56,7 @@ public partial class Form1 : Form
             var user = db.Users.FirstOrDefault(x => x.Id == id);
             if (user != null)
             {
-                user.UserName = "xyz";
+                user.User_name = "xyz";
                 db.SaveChanges();
             }
         }

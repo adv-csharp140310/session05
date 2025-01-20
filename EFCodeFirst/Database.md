@@ -63,13 +63,22 @@ Code -> db access
 
 
 1. add package Microsoft.EntityFrameworkCore.SqlServer
+1. add package Microsoft.EntityFrameworkCore.Design
 2. create enities
 3. context
 
 
 Migration
-
+	
 	Install
 		dotnet tool install --global dotnet-ef
 	update
 		dotnet tool update --global dotnet-ef
+
+
+
+	add migration (FOLDER PROJECT)
+		dotnet ef migration add <NAME>
+
+	update database
+		dotnet ef database update
