@@ -60,3 +60,8 @@ Code -> db access
 
 # Code First
 	Add Nuget Package
+
+
+1. add package Microsoft.EntityFrameworkCore.SqlServer
+2. create enities
+3. context

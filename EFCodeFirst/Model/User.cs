@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EFCodeFirst.Model;
+
+//POCO - Plain Old CLR Object
+//Entity
 public class User
 {
     public int Id { get; set; }
