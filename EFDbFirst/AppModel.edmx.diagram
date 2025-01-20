@@ -7,7 +7,7 @@
       <Diagram DiagramId="ff5bc59cb90c475895121fc97dccac12" Name="Diagram1">
         <EntityTypeShape EntityType="cs140310Model.Product" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="cs140310Model.User" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="cs140310Model.Country" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="cs140310Model.Country" Width="1.5" PointX="0.75" PointY="3.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
