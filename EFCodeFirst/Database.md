@@ -65,3 +65,11 @@ Code -> db access
 1. add package Microsoft.EntityFrameworkCore.SqlServer
 2. create enities
 3. context
+
+
+Migration
+
+	Install
+		dotnet tool install --global dotnet-ef
+	update
+		dotnet tool update --global dotnet-ef

@@ -31,6 +31,9 @@ partial class Form1
         buttonEnsureDB = new Button();
         buttonCreateUser = new Button();
         dataGridView1 = new DataGridView();
+        ColumnEdit = new DataGridViewButtonColumn();
+        ColumnDelete = new DataGridViewButtonColumn();
+        buttonLoadData = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -56,22 +59,55 @@ partial class Form1
         // 
         // dataGridView1
         // 
+        dataGridView1.AllowUserToAddRows = false;
+        dataGridView1.AllowUserToDeleteRows = false;
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnEdit, ColumnDelete });
         dataGridView1.Location = new Point(12, 81);
         dataGridView1.Name = "dataGridView1";
+        dataGridView1.ReadOnly = true;
         dataGridView1.Size = new Size(776, 357);
         dataGridView1.TabIndex = 2;
+        dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+        // 
+        // ColumnEdit
+        // 
+        ColumnEdit.HeaderText = "Edit";
+        ColumnEdit.Name = "ColumnEdit";
+        ColumnEdit.ReadOnly = true;
+        ColumnEdit.Text = "Edit";
+        ColumnEdit.UseColumnTextForButtonValue = true;
+        // 
+        // ColumnDelete
+        // 
+        ColumnDelete.HeaderText = "Delete";
+        ColumnDelete.Name = "ColumnDelete";
+        ColumnDelete.ReadOnly = true;
+        ColumnDelete.Text = "Delete";
+        ColumnDelete.UseColumnTextForButtonValue = true;
+        // 
+        // buttonLoadData
+        // 
+        buttonLoadData.Location = new Point(704, 41);
+        buttonLoadData.Name = "buttonLoadData";
+        buttonLoadData.Size = new Size(75, 23);
+        buttonLoadData.TabIndex = 3;
+        buttonLoadData.Text = "Load Data";
+        buttonLoadData.UseVisualStyleBackColor = true;
+        buttonLoadData.Click += buttonLoadData_Click;
         // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(buttonLoadData);
         Controls.Add(dataGridView1);
         Controls.Add(buttonCreateUser);
         Controls.Add(buttonEnsureDB);
         Name = "Form1";
         Text = "Form1";
+        Load += Form1_Load;
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
     }
@@ -81,4 +117,7 @@ partial class Form1
     private Button buttonEnsureDB;
     private Button buttonCreateUser;
     private DataGridView dataGridView1;
+    private DataGridViewButtonColumn ColumnEdit;
+    private DataGridViewButtonColumn ColumnDelete;
+    private Button buttonLoadData;
 }
