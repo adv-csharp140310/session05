@@ -45,8 +45,13 @@ public partial class Form1 : Form
         dataGridView1.DataSource = null;
         dataGridView1.DataSource = users;
     }
+       
+    private void buttonLoadData_Click(object sender, EventArgs e)
+    {
+        loadData();
+    }
 
-    private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
     {
         var id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
         if (dataGridView1.CurrentCell.OwningColumn.Name == "ColumnEdit")
@@ -74,11 +79,6 @@ public partial class Form1 : Form
 
         }
 
-        //loadData();
-    }
-
-    private void buttonLoadData_Click(object sender, EventArgs e)
-    {
         loadData();
     }
 }
