@@ -34,6 +34,7 @@ partial class Form1
         ColumnEdit = new DataGridViewButtonColumn();
         ColumnDelete = new DataGridViewButtonColumn();
         buttonLoadData = new Button();
+        buttonBlog = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -96,11 +97,22 @@ partial class Form1
         buttonLoadData.UseVisualStyleBackColor = true;
         buttonLoadData.Click += buttonLoadData_Click;
         // 
+        // buttonBlog
+        // 
+        buttonBlog.Location = new Point(623, 41);
+        buttonBlog.Name = "buttonBlog";
+        buttonBlog.Size = new Size(75, 23);
+        buttonBlog.TabIndex = 4;
+        buttonBlog.Text = "Blog";
+        buttonBlog.UseVisualStyleBackColor = true;
+        buttonBlog.Click += buttonBlog_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(buttonBlog);
         Controls.Add(buttonLoadData);
         Controls.Add(dataGridView1);
         Controls.Add(buttonCreateUser);
@@ -120,4 +132,5 @@ partial class Form1
     private DataGridViewButtonColumn ColumnEdit;
     private DataGridViewButtonColumn ColumnDelete;
     private Button buttonLoadData;
+    private Button buttonBlog;
 }

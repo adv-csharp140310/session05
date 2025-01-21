@@ -1,4 +1,5 @@
 using EFCodeFirst.Model;
+using EFCodeFirst.UI;
 using System.Windows.Forms;
 
 namespace EFCodeFirst;
@@ -45,7 +46,7 @@ public partial class Form1 : Form
         dataGridView1.DataSource = null;
         dataGridView1.DataSource = users;
     }
-       
+
     private void buttonLoadData_Click(object sender, EventArgs e)
     {
         loadData();
@@ -80,5 +81,11 @@ public partial class Form1 : Form
         }
 
         loadData();
+    }
+
+    private void buttonBlog_Click(object sender, EventArgs e)
+    {
+        using var frm = new FormBlog();
+        frm.ShowDialog();
     }
 }
